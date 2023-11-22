@@ -21,6 +21,15 @@ class MEPRepository extends ServiceEntityRepository
         parent::__construct($registry, MEP::class);
     }
 
+    public function findWithoutContact(): array
+    {
+        return $this->createQueryBuilder('p')
+            ->select('p.mep_id, p.full_name, p.country, p.political_group')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 //    public function insertFromImport($data){
 //        foreach($data as $element){
 //            $sql = "INSERT INTO mep (id, name, country, ) VALUES (?,?,?,?,?)";
