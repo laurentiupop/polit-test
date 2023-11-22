@@ -42,6 +42,7 @@ and use to get JSON requests from task 3 like this:
 - for list of MEPs : http://polit.test/api/persons
 - for specific MEP by id : http://polit.test/api/person/<id>
 
-Task1 and 2 and 3 - to run task1 use php bin/console app:import-meps
-for 4 I user: php bin/console messenger:consume async -vv (but is not finished)
+Task1 and 2 and 3 - use in command line: php bin/console app:import-meps
+
+For 4 I user: php bin/console messenger:consume async -vv (but is not finished)
 
