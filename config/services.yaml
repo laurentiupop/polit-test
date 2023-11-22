@@ -20,5 +20,17 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Message\ImportMEPMessage:
+        public: false
+
+    App\MessageHandler\ImportMEPHandler:
+        public: false
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+framework:
+    messenger:
+        transports:
+            async: 'doctrine://default'
+        routing:
+            'App\Message\ImportMEPMessage': async

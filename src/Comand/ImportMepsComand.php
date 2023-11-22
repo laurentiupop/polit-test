@@ -87,7 +87,7 @@ class ImportMepsComand extends Command
         return Command::SUCCESS;
     }
 
-    private function fetchAdditionalDetails(MEP $mep)
+    public function fetchAdditionalDetails(MEP $mep)
     {
         // Fetch MEP details page content
         $httpClient = HttpClient::create();
